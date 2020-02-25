@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Home</h3>
+    <form action="/add" method="post">
+        <input type="text" name="en" id="" placeholder="EN">
+        <br><br>
+        <input type="text" name="vn" id="" placeholder="VN">
+        <br><br>
+        <button>sumbit</button>
+    </form>
+    <% arr.forEach( i => { %>
+        <h4><%= i.en %></h4>
+        <h5><%= i.vn %></h5>
+        <a href="/remove/<%= i._id %>">xoá</a>
+        <a href="/edit/<%= i._id %>">sửa</a>
+    <% }) %>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin</title>
+    
+</head>
+<style>
+    table {
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid black;
+  padding: 1em;
+}
+</style>
+<body>
+   <table class="table">
+       <thead>
+           <tr>
+               <th>No.</th>
+               <th>Name</th>
+               <th>Age</th>
+               <th>Email</th>
+               <th>image</th>
+               <th colspan="2">Edit</th>
+           </tr>
+       </thead>
+       <tbody>
+        <% result.forEach(e =>{ %>
+           <tr>
+                <td><%= e._id %></td>
+                <td><%= e.name %></td>
+                <td><%= e.age %></td>
+                <td><%= e.email %></td>
+                <td><%= e.image %></td>
+
+                <td><a href="/edit/<%= e._id %>">Sua</a></td>
+                <td><a href="/remove/<%= e._id %>">Xoa</a></td>
+            </tr>
+        <%  }) %>
+       </tbody>
+   </table>
+</body>
+</html>
